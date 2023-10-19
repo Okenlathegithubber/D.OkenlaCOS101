@@ -3,4 +3,3 @@ fn main() {
 
 	println!("Henceforth you shall be called RUSTACIANS!");
 }
-

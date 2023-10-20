@@ -1,12 +1,14 @@
 fn main() {
-	let p:f64 = 210000.0;
-	let r:f64 = 5.0;
-	let n:f64 = 3.0;
+	let p:u64 = 210000;
+	let r:u64 = 5;
+	let n:u64 = 3;
 
-	let a = p * (1.0 - (r/100.0)) * n;
+	// Getting amount.
+	let a = p * (1 - (r/100)) ^ n;
 
 	println!("Amount is N{}", a);
 
+	//Getting the depreciation of the tv
 	let ci = a - p;
 	println!("Depriciation is N{}", ci);
 }

@@ -4,52 +4,99 @@ fn main()
 {
     println!("WELCOME TO TABITHA KITCHEN!!!");
     println!("");
+    println!("Note: Discount of 5% is given when price is more than N10,000");
+    println!("Menu:");
+    println!("P = Poundo Yam/Edinkaiko Soup      - N3,200");
+    println!("F = Fried Rice & Chicken           - N3,000");
+    println!("A = Amala & Ewedu Soup             - N2,500");
+    println!("E = Eba & Egusi Soup               - N2,000");
+    println!("W = White Rice & Stew              - N2,500");
 
-    let p = "Poundo Yam/Edinkaiko Soup";
-    let f = "Fried Rice and Chicken";
-    let a = "Amala and Ewedu Soup";
-    let e = "Eba and Egusi Soup";
-    let w = "White Rice and Stew";
-    let s = "stop";
-    let mut choice = String::new();
-    let mut portion = String::new();
+    let P = "Poundo Yam/Edinkaiko Soup";
+    let F = "Fried Rice & Chicken";
+    let A = "Amala & Ewedu Soup";
+    let E = "Eba & Egusi Soup";
+    let W = "White Rice & Stew";
 
-    let price_p = 3200; 
-    let price_f = 3000;
-    let price_a = 2500;
-    let price_e = 2000;
-    let price_w = 2500;
+    let price_P = 3200.0;
+    let price_F = 3000.0;
+    let price_A = 2500.0;
+    let price_E = 2000.0;
+    let price_W = 2500.0;
 
-    println!("Menu:\n{} N{}\n{} N{}\n{} N{}\n{} N{}\n{} N{}",p,price_p,f,price_f,a,price_a,e,price_e,w,price_w);
-    println!("");
+    println!("What would you like to order?");
+    let mut food_type = String::new();
+    io::stdin().read_line(&mut food_type).expect("Failed to read input");
+    let food_type = food_type.trim();
 
-    println!("Enter p for {}\nEnter f for {}\nEnter a for {}\nEnter e for {}\nEnter w for {}\nEnter s for {}",p,f,a,e,w,s);
-    println!("What would you like to have?");
-    io::stdin().read_line(&mut choice).expect("Failed to read input");
-    let choice = choice.trim();
+    println!("How many portion(s) of {} would you like?",food_type);
+    let mut quantity = String::new();
+    io::stdin().read_line(&mut quantity).expect("Failed to read input");
+    let quantity: f32 = quantity.trim().parse().expect("Failed to input");
 
-    println!("How many portions?");
-    io::stdin().read_line(&mut portion).expect("Failed to read input");
-    let portion:i32 = portion.trim().parse().expect("Failed to input");
-
-
-    loop
+    if food_type == "P"
     {
-        println!("Would you like to have anything else? (yes/no)");
-        io::stdin().read_line(&mut choice).expect("Failed to read input");
+        let total = quantity * price_P;
+        println!("Total charge for {}: {}", P, total);
+        if total > 10_000.0
+        {
+            let discount_price = total * 0.05;
+            println!("The discount is {}", discount_price);
+            let discount = total - discount_price;
+            println!("Your Total price now:{}", discount);
+        }
     }
-    // loop
-    // {
-    //     println!("Would you like to have anything else? (yes/no)");
-    //     io::stdin().read_line(&mut choice).expect("Failed to read input");
-    //     if choice == "yes"
-    //     {
-    //         println!("What else would you like?");
-    //         io::stdin().read_line(&mut choice).expect("Failed to read input");
-    //         println!("How many portions?");
-    //         io::stdin().read_line(&mut portion).expect("Failed to read input");
-    //         let portion:i32 = portion.trim().parse().expect("Failed to input");
-    //     }
 
-    // }    
+    else if food_type == "F"
+    {
+        let total = quantity * price_F;
+        println!("Total charge for {}: {}", F, total);
+        if total > 10_000.0
+        {
+            let discount_price = total * 0.05;
+            println!("The discount is {}", discount_price);
+            let discount = total - discount_price;
+            println!("Your Total price now: {}", discount);
+        }
+    }
+
+    else if food_type == "A"
+    {
+        let total = quantity * price_A;
+        println!("Total charge for {}: {}", A, total);
+        if total > 10_000.0
+        {
+            let discount_price = total * 0.05;
+            println!("The discount is {}", discount_price);
+            let discount = total - discount_price;
+            println!("Your Total price now: {}", discount);
+        }
+    }
+
+    else if food_type == "E"
+    {
+        let total = quantity * price_E;
+        println!("Total charge for {}: {}", E, total);
+        if total > 10_000.0
+        {
+            let discount_price = total * 0.05;
+            println!("The discount is {}", discount_price);
+            let discount = total - discount_price;
+            println!("Your Total price now: {}", discount);
+        }
+    }
+
+    else if food_type == "W"
+    {
+        let total = quantity * price_W;
+        println!("Total charge for {}: {}", W, total);
+        if total > 10_000.0
+        {
+            let discount_price = total * 0.05;
+            println!("The discount is {}", discount_price);
+            let discount = total - discount_price;
+            println!("Your Total price now: {}", discount);
+        }
+    }
+
 }

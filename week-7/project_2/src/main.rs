@@ -1,4 +1,4 @@
-// Rust program to get and display data of sibling(s).
+ // Rust program to get and display data of sibling(s).
 
 use std::io;
 
@@ -25,12 +25,6 @@ fn get_name_and_age_of_siblings(sibling_amount: i32)
             sibling_info_2()
         }
 
-        let sibling_arr = [_sibling_name, _sibling_age];
-
-        for s in 0..sibling_amount
-        {
-            println!("{} Name:, Age: {}", s, sibling_arr[s]);
-        }
     }
 }
 

@@ -12,10 +12,6 @@ fn main()
     let mut course : Vec<String> = Vec::new();
     let mut offspring : Vec<String> = Vec::new();
     let mut location : Vec<String> = Vec::new();
-    let mut exam : Vec<String> = Vec::new();
-    let mut class : Vec<String> = Vec::new();
-    let mut high_school : Vec<String> = Vec::new();
-
 
     println!("Hey, What is your name?");
     let mut name = String::new();
@@ -101,7 +97,6 @@ fn main()
                 let mut input = String::new();
                 io::stdin().read_line(&mut input).expect("Failed to read input");
                 let _waec : String = input.trim().parse().expect("Invalid input");
-                exam.push(_waec.clone());
 
                 if _waec == "Y"
                 {
@@ -109,7 +104,6 @@ fn main()
                     let mut input = String::new();
                     io::stdin().read_line(&mut input).expect("Failed to read input");
                     let _sibling_school : String = input.trim().parse().expect("Invalid input");
-                    high_school.push(_sibling_school);
                 }
                 else
                 {
@@ -117,58 +111,47 @@ fn main()
                     let mut input = String::new();
                     io::stdin().read_line(&mut input).expect("Failed to read input");
                     let _sibling_class : String = input.trim().parse().expect("Invalid input");
-                    class.push(_sibling_class);
                 }
             }
         }
         for index in 0..sibling_amount
         {
-            println!("\nName {}: {}", index, names[index]);
+            println!("\nName {}: {}", index + 1, names[index]);
         }
         for index in 0..sibling_amount
         {
-            println!("Age {}: {}", index, ages[index]);
+            println!("Age {}: {}", index + 1, ages[index]);
         }
         for index in 0..sibling_amount
         {
-            println!("Martial Status {}: {}", index, martial_status[index]);
+            println!("Martial Status {}: {}", index + 1, martial_status[index]);
+        
+            if false
+            {
+                println!("Martial Status {}: -", index + 1);
+            }
         }
-        for index in 0..sibling_amount
-        {
+        // for index in 0..sibling_amount
+        // {
 
-            println!("Occupation {}: {}", index, occupation[index]);
-        }
-        for index in 0..sibling_amount
-        {
-            println!("University {}: {}", index, university[index]);
-        }
-        for index in 0..sibling_amount
-        {
-            println!("Course {}: {}", index, course[index]);
-        }
-        for index in 0..sibling_amount
-        {
-           println!("Offspring {}: {}", index, offspring[index]);
-        }
+        //     println!("Occupation {}: {}", index + 1, occupation[index]);
+        // }
+        // for index in 0..sibling_amount
+        // {
+        //     println!("University {}: {}", index + 1, university[index]);
+        // }
+        // for index in 0..sibling_amount
+        // {
+        //     println!("Course {}: {}", index + 1, course[index]);
+        // }
+        // for index in 0..sibling_amount
+        // {
+        //    println!("Offspring {}: {}", index + 1, offspring[index]);
+        // }
 
-        for index in 0..sibling_amount
-        {
-            println!("Location {}: {}", index, location[index]);
-        }
-
-        for index in 0..sibling_amount
-        {
-           println!("Exam {}: {}", index, exam[index]);
-        }
-
-        for index in 0..sibling_amount
-        {
-            println!("High-School {}: {}", index, high_school[index]);
-        }
-
-        for index in 0..sibling_amount
-        {
-            println!("Class {}: {}", index, class[index]);
-        }
+        // for index in 0..sibling_amount
+        // {
+        //     println!("Location {}: {}", index + 1, location[index]);
+        // }
     }
 }

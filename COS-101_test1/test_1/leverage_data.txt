@@ -1,0 +1,15 @@
+Company
+Cadbury
+
+Founded Date
+1965
+
+Assets
+15000000
+
+Liabilities
+5500000
+
+Leverage Percentage
+63.333332
+

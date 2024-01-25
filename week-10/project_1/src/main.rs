@@ -9,7 +9,7 @@ struct Eshop
     price1:u32,
     price2:u32,
     price3:u32,
-    price4:u32,
+    price4:u32
 }
 
 impl Eshop
